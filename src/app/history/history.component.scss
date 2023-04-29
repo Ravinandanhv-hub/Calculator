@@ -1,0 +1,21 @@
+.bg{
+    background-color: rgba(0, 0, 0, 0.305);
+}
+
+#list{
+    overflow-y: auto;
+}
+
+.res{
+    padding-left: 2px;
+    overflow-x: auto;
+}
+
+// .res::-webkit-scrollbar{
+//     height: 6px;
+// }
+
+// .res::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 0 transparent;
+//     border-radius: 4px;
+//   }

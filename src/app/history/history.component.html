@@ -1,0 +1,14 @@
+<div class="border">
+    <div class="d-flex justify-content-between bg">
+        <span class="p-2">History</span>
+        <a class="align-item-center p-2" style="cursor: pointer;" (click)="location.back()">back</a>
+    </div>
+    <div class="rounded-bottom bg-light" id="list">
+        <div class="p-2" *ngIf="arr.length==0">No history found</div>
+        <div *ngFor="let item of arr">
+            <div class="m-2 border res">
+                {{item}}
+            </div>
+        </div>
+    </div>
+</div>

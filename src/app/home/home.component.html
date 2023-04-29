@@ -1,0 +1,87 @@
+<div class="row  bg-light rounded text-center">
+    <textarea #area id="textarea" style="max-height: 80px; min-height: 80px;resize: none;position: relative;" readonly
+        (keyup.enter)="execute()"></textarea>
+    <button type="button" routerLink="history" class="btn btn-secondary col-4 p-0 m-2">History</button>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="st c rounded-circle" (click)="clearAll()">
+            AC
+        </div>
+        <div class="st c rounded-circle" (click)="back()">
+            C
+        </div>
+        <div class="st c rounded-circle" (click)="percentage()">
+            %
+        </div>
+        <div class="st op rounded-circle" (click)="addOpperator('/')">
+            /
+        </div>
+    </div>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="st sp rounded-circle" (click)="addNumber(7)">
+            7
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(8)">
+            8
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(9)">
+            9
+        </div>
+        <div class="st op rounded-circle" (click)="addOpperator('*')">
+            *
+        </div>
+    </div>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="st sp rounded-circle" (click)="addNumber(4)">
+            4
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(5)">
+            5
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(6)">
+            6
+        </div>
+        <div class="st op rounded-circle" (click)="addOpperator('-')">
+            -
+        </div>
+    </div>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="st sp rounded-circle" (click)="addNumber(1)">
+            1
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(2)">
+            2
+        </div>
+        <div class="st sp rounded-circle" (click)="addNumber(3)">
+            3
+        </div>
+        <div class="st op rounded-circle" (click)="addOpperator('+')">
+            +
+        </div>
+    </div>
+    <div class="d-flex align-item-center justify-content-center">
+        <div class="st sp rounded-circle" (click)="addNumber(0)">
+            0
+        </div>
+        <div class="st sp rounded-circle" (click)="dot('.')">
+            .
+        </div>
+        <div class="st sp rounded-circle" (click)="sign()">
+            +/-
+        </div>
+        <div class="st eq rounded" (click)="execute()">
+            =
+        </div>
+    </div>
+</div>
+<ng-template #model>
+    <div class="modal-header">
+        <button class="btn-close" aria-label="Close" (click)="modelRef.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure, want to clear?</p>
+    </div>
+    <div class="modal-footer">
+        <button (click)="modelRef.close(true)">yes</button>
+        <button (click)="modelRef.dismiss()">No</button>
+    </div>
+</ng-template>
